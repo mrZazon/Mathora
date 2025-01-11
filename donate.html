@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Mathora</title>
+    <style>
+        /* Estilo general */
+        body {
+            font-family: 'Press Start 2P', monospace; /* Fuente pixel art */
+            background-color: #87a8a8;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 100vh;
+        }
+
+        /* Contenedor */
+        .container {
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+            padding: 2rem;
+            max-width: 400px;
+        }
+
+        /* Títulos */
+        h1 {
+            color: #fcd34d;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Texto general */
+        p {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Botón */
+        .button {
+            background-color: #fcd34d;
+            color: #000;
+            font-size: 1rem;
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            font-weight: bold;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Formulario */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        input[type="email"], textarea {
+            padding: 0.8rem;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.4);
+            color: white;
+            font-size: 1rem;
+        }
+
+        input[type="email"]:focus, textarea:focus {
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Donate to Mathora</h1>
+        <p>
+            Your support helps us improve Mathora and make educational resources more accessible.
+        </p>
+        <p>
+            If you would like to donate, please contact us at <a href="mailto:help.mathora@gmail.com" style="color: #fcd34d;">help.mathora@gmail.com</a>.
+        </p>
+        <a href="mailto:help.mathora@gmail.com" class="button">Send Email</a>
+    </div>
+</body>
+</html>
