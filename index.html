@@ -79,6 +79,40 @@
             box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
         }
 
+        /* Selector de idioma */
+        .language-selector {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 0.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .language-menu {
+            display: none;
+            position: absolute;
+            top: 3rem;
+            right: 1rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .language-menu a {
+            display: block;
+            padding: 0.5rem;
+            color: white;
+            text-decoration: none;
+        }
+
+        .language-menu a:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
         /* Secciones adicionales */
         .section {
             max-width: 800px;
@@ -125,6 +159,13 @@
         <a href="donate.html" class="button">Donate Now</a>
     </div>
 
+    <!-- Selector de idioma -->
+    <button class="language-selector">Language</button>
+    <div class="language-menu">
+        <a href="?lang=en">English</a>
+        <a href="?lang=es">Español</a>
+    </div>
+
     <!-- Privacy Policy Section -->
     <div id="privacy-policy" class="section">
         <h3>Privacy Policy</h3>
@@ -149,5 +190,12 @@
         &copy; 2025 Mathora. All rights reserved.  
         <a href="#privacy-policy">Privacy Policy</a> | <a href="#terms-of-service">Terms of Service</a>
     </footer>
+
+    <script>
+        // Manejo del selector de idioma
+        document.querySelector('.language-selector').addEventListener('click', function() {
+            document.querySelector('.language-menu').classList.toggle('display');
+        });
+    </script>
 </body>
 </html>
