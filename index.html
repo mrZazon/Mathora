@@ -3,75 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mathora</title>
+    <meta name="description" content="Mathora: A fun and interactive platform to learn Math, Physics, and Programming.">
+    <meta name="author" content="Mathora Team">
+    <title>Mathora - Learn the Fun Way!</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
+        /* Reset de estilos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         /* Estilo general */
         body {
             font-family: 'Press Start 2P', monospace; /* Fuente estilo pixel art */
-            background-color: #a4c1c7;
+            background: linear-gradient(135deg, #87a8a8, #5d7a7a);
             color: white;
-            margin: 0;
-            padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
             text-align: center;
+            padding: 1rem;
+        }
+
+        /* Contenedor principal */
+        .container {
+            max-width: 800px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            padding: 2rem;
         }
 
         /* Títulos */
         h1 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
+            color: #fcd34d;
         }
 
         h2 {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
         }
 
         /* Texto general */
         p {
             font-size: 1rem;
-            line-height: 1.6;
-            margin: 0 1rem 2rem;
-            text-align: justify; /* Texto justificado */
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            text-align: justify;
         }
 
         /* Botón */
         .button {
-            background-color: white;
-            color: #a4c1c7;
+            display: inline-block;
+            background-color: #fcd34d;
+            color: #000000;
             font-size: 1rem;
             text-decoration: none;
             padding: 0.8rem 1.5rem;
             border-radius: 5px;
             font-weight: bold;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-            transition: transform 0.2s, box-shadow 0.2s;
-            display: inline-block;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .button:hover {
             transform: translateY(-3px);
-            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Pie de página */
+        footer {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: #d1d5db;
+        }
+
+        footer a {
+            color: #fcd34d;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to Mathora</h1>
-    <h2>Learn Math, Physics, and Programming the fun way!</h2>
-    <p>
-        Mathora is a platform created by students, for students.  
-        Dive into dynamic lessons and interactive games that make learning easy and enjoyable.
-    </p>
-    <p>
-        Currently available in English and Spanish, with more languages coming soon.  
-        And the best part? It's completely free!
-    </p>
-    <a href="#" class="button">Donate Now</a>
+    <div class="container">
+        <h1>Welcome to Mathora</h1>
+        <h2>Learn Math, Physics, and Programming the Fun Way!</h2>
+        <p>
+            Mathora is a platform created by students, for students.  
+            Dive into dynamic lessons and interactive games that make learning easy and enjoyable.  
+        </p>
+        <p>
+            Currently available in English and Spanish, with more languages coming soon.  
+            Join us in making education accessible and fun for everyone!
+        </p>
+        <a href="#" class="button">Donate Now</a>
+    </div>
+    <footer>
+        &copy; 2025 Mathora. All rights reserved.  
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </footer>
 </body>
 </html>
-
