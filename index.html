@@ -23,8 +23,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            min-height: 100vh;
             text-align: center;
             padding: 1rem;
         }
@@ -36,19 +34,22 @@
             border-radius: 10px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
             padding: 2rem;
+            margin-bottom: 2rem;
         }
 
         /* Títulos */
+        h1, h2 {
+            color: #fcd34d;
+        }
+
         h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            color: #fcd34d;
         }
 
         h2 {
             font-size: 1.8rem;
             margin-bottom: 1.5rem;
-            color: #ffffff;
         }
 
         /* Texto general */
@@ -78,9 +79,23 @@
             box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
         }
 
+        /* Secciones adicionales */
+        .section {
+            max-width: 800px;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            text-align: justify;
+        }
+
+        .section h3 {
+            color: #fcd34d;
+            margin-bottom: 1rem;
+        }
+
         /* Pie de página */
         footer {
-            margin-top: 2rem;
             font-size: 0.8rem;
             color: #d1d5db;
         }
@@ -109,9 +124,30 @@
         </p>
         <a href="#" class="button">Donate Now</a>
     </div>
+
+    <!-- Privacy Policy Section -->
+    <div id="privacy-policy" class="section">
+        <h3>Privacy Policy</h3>
+        <p>
+            At Mathora, we value your privacy. We do not share or sell your personal information with third parties.  
+            All data collected is used solely to improve your experience on our platform.  
+            By using Mathora, you agree to our data collection practices as outlined here.
+        </p>
+    </div>
+
+    <!-- Terms of Service Section -->
+    <div id="terms-of-service" class="section">
+        <h3>Terms of Service</h3>
+        <p>
+            By accessing Mathora, you agree to use the platform responsibly.  
+            Unauthorized distribution, reverse engineering, or misuse of our services is prohibited.  
+            Mathora reserves the right to modify these terms at any time without prior notice.
+        </p>
+    </div>
+
     <footer>
         &copy; 2025 Mathora. All rights reserved.  
-        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        <a href="#privacy-policy">Privacy Policy</a> | <a href="#terms-of-service">Terms of Service</a>
     </footer>
 </body>
 </html>
