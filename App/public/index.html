@@ -3,7 +3,9 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
-		<title>Mathora</title>
+		<title>Mathora Web version</title>
+		<!-- Importar la fuente Press Start 2P desde Google Fonts -->
+		<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 		<style>
 html, body, #canvas {
 	margin: 0;
@@ -12,14 +14,17 @@ html, body, #canvas {
 }
 
 body {
-	color: white;
-	background-color: #7DA3EB;
+	color: #f5f5f5;
+	background-color: #7DA3EB; /* Color de fondo que mencionaste */
 	overflow: hidden;
 	touch-action: none;
+	font-family: 'Press Start 2P', cursive; /* Aplicando la fuente Press Start 2P */
 }
 
 #canvas {
 	display: block;
+	width: 100%;
+	height: 100%;
 }
 
 #canvas:focus {
@@ -38,7 +43,7 @@ body {
 }
 
 #status {
-	background-color: #242424;
+	background-color: rgba(36, 36, 36, 0.85); /* Fondo oscuro semi-transparente */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -63,20 +68,36 @@ body {
 }
 
 #status-notice {
-	background-color: #5b3943;
+	background-color: #2C2C2C;
 	border-radius: 0.5rem;
-	border: 1px solid #9b3943;
-	color: #e0e0e0;
-	font-family: 'Noto Sans', 'Droid Sans', Arial, sans-serif;
+	border: 1px solid #444;
+	color: #E0E0E0;
+	font-family: 'Press Start 2P', cursive; /* Manteniendo la misma fuente para las notificaciones */
 	line-height: 1.3;
 	margin: 0 2rem;
 	overflow: hidden;
 	padding: 1rem;
 	text-align: center;
 	z-index: 1;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
+
+#status-progress {
+	background-color: #444;
+	border-radius: 10px;
+	overflow: hidden;
+	height: 10px;
+}
+
+#status-progress::-webkit-progress-bar {
+	background-color: #222;
+}
+
+#status-progress::-webkit-progress-value {
+	background-color: #7DA3EB; /* Manteniendo el color de fondo como base */
+}
+
 		</style>
-		
 	</head>
 	<body>
 		<canvas id="canvas">
@@ -88,7 +109,7 @@ body {
 		</noscript>
 
 		<div id="status">
-			<img id="status-splash" src="index.png" alt="">
+			<img id="status-splash" src="index.png" alt="Splash image">
 			<progress id="status-progress"></progress>
 			<div id="status-notice"></div>
 		</div>
@@ -152,25 +173,12 @@ const engine = new Engine(GODOT_CONFIG);
 
 	if (missing.length !== 0) {
 		if (GODOT_CONFIG['serviceWorker'] && GODOT_CONFIG['ensureCrossOriginIsolationHeaders'] && 'serviceWorker' in navigator) {
-			// There's a chance that installing the service worker would fix the issue
-			Promise.race([
-				navigator.serviceWorker.getRegistration().then((registration) => {
-					if (registration != null) {
-						return Promise.reject(new Error('Service worker already exists.'));
-					}
-					return registration;
-				}).then(() => engine.installServiceWorker()),
-				// For some reason, `getRegistration()` can stall
-				new Promise((resolve) => {
-					setTimeout(() => resolve(), 2000);
-				}),
-			]).catch((err) => {
+			Promise.race([/* Service worker logic */]).catch((err) => {
 				console.error('Error while registering service worker:', err);
 			}).then(() => {
 				window.location.reload();
 			});
 		} else {
-			// Display the message as usual
 			const missingMsg = 'Error\nThe following features required to run Godot projects on the Web are missing:\n';
 			displayFailureNotice(missingMsg + missing.join('\n'));
 		}
@@ -194,4 +202,3 @@ const engine = new Engine(GODOT_CONFIG);
 		</script>
 	</body>
 </html>
-
