@@ -3,200 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mathora: A fun and interactive platform to learn Math, Physics, and Programming.">
-    <meta name="author" content="Mathora Team">
-    <title>Mathora - Learn the Fun Way!</title>
+    <meta name="description" content="Mathora: A place where education meets adventure. Transforming how you see the world of learning.">
+    <title>Mathora</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <style>
-        /* Reset de estilos */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Estilo general */
-        body {
-            font-family: 'Press Start 2P', monospace; /* Fuente estilo pixel art */
-            background: linear-gradient(135deg, #87a8a8, #5d7a7a);
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 1rem;
-            min-height: 100vh;
-        }
-
-        /* Contenedor principal */
-        .container {
-            max-width: 800px;
-            background-color: rgba(0, 0, 0, 0.5);
-            border-radius: 10px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-            padding: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        /* Títulos */
-        h1, h2 {
-            color: #fcd34d;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        h2 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-        }
-
-        /* Texto general */
-        p {
-            font-size: 1rem;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-            text-align: justify;
-        }
-
-        /* Botón */
-        .button {
-            display: inline-block;
-            background-color: #fcd34d;
-            color: #000000;
-            font-size: 1rem;
-            text-decoration: none;
-            padding: 0.8rem 1.5rem;
-            border-radius: 5px;
-            font-weight: bold;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .button:hover {
-            transform: translateY(-3px);
-            box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
-        }
-
-        /* Selector de idioma */
-        .language-selector {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 0.5rem;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .language-menu {
-            display: none;
-            position: absolute;
-            top: 3rem;
-            right: 1rem;
-            background-color: rgba(0, 0, 0, 0.5);
-            border-radius: 5px;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
-        }
-
-        .language-menu a {
-            display: block;
-            padding: 0.5rem;
-            color: white;
-            text-decoration: none;
-        }
-
-        .language-menu a:hover {
-            background-color: rgba(0, 0, 0, 0.7);
-        }
-
-        /* Secciones adicionales */
-        .section {
-            max-width: 800px;
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 10px;
-            margin-bottom: 2rem;
-            text-align: justify;
-        }
-
-        .section h3 {
-            color: #fcd34d;
-            margin-bottom: 1rem;
-        }
-
-        /* Pie de página */
-        footer {
-            font-size: 0.8rem;
-            color: #d1d5db;
-        }
-
-        footer a {
-            color: #fcd34d;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css?v=8">
+    <link rel="icon" type="image/png" href="Resources/Brand/logo.png">
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to Mathora</h1>
-        <h2>Learn Math, Physics, and Programming the Fun Way!</h2>
-        <p>
-            Mathora is a platform created by students, for students.  
-            Dive into dynamic lessons and interactive games that make learning easy and enjoyable.  
-        </p>
-        <p>
-            Currently available in English and Spanish, with more languages coming soon.  
-            Join us in making education accessible and fun for everyone!
-        </p>
-        <a href="donate.html" class="button">Donate Now</a>
-    </div>
+    <!-- Navbar -->
+    <nav>
+        <img src="Resources/Brand/logo.png" alt="Mathora Logo" class="logo">
+        <a href="#section1">Home</a>
+        <a href="#section2">Discover</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#donate">Donate</a>
+        <a href="downloads.html">Downloads</a>
+    </nav>
 
-    <!-- Selector de idioma -->
-    <button class="language-selector">Language</button>
-    <div class="language-menu">
-        <a href="?lang=en">English</a>
-        <a href="?lang=es">Español</a>
-    </div>
+    <!-- Hero Section -->
+    <section id="section1">
+        <div class="content">
+            <h1>Welcome to <span style="color: #E1CF36;">Mathora</span></h1>
+            <p>Step into a world where education feels like discovery. With Mathora, every concept becomes an adventure.</p>
+            <p><em>Learn, grow, and achieve like never before.</em></p>
+            <button class="btn" onclick="window.location.href='downloads.html'">Start Your Journey</button>
+        </div>
+    </section>
 
-    <!-- Privacy Policy Section -->
-    <div id="privacy-policy" class="section">
-        <h3>Privacy Policy</h3>
-        <p>
-            At Mathora, we value your privacy. We do not share or sell your personal information with third parties.  
-            All data collected is used solely to improve your experience on our platform.  
-            By using Mathora, you agree to our data collection practices as outlined here.
-        </p>
-    </div>
+    <!-- Parallax Section -->
+    <section class="parallax">
+        <div class="content">
+            <h1>Feel <span style="color: #E1CF36;">the power</span> of Knowledge</h1>
+            <p>At Mathora, we believe that education is the most powerful tool to unlock dreams. Let us be part of your story.</p>
+        </div>
+    </section>
 
-    <!-- Terms of Service Section -->
-    <div id="terms-of-service" class="section">
-        <h3>Terms of Service</h3>
-        <p>
-            By accessing Mathora, you agree to use the platform responsibly.  
-            Unauthorized distribution, reverse engineering, or misuse of our services is prohibited.  
-            Mathora reserves the right to modify these terms at any time without prior notice.
-        </p>
-    </div>
+    <!-- Dynamic Learning Section -->
+    <section id="section2">
+        <div class="content">
+            <h1><span style="color: #E1CF36;">Redefine</span> Learning</h1>
+            <p>Discover the joy of mastering concepts through clever, interactive activities designed to make every step engaging.</p>
+            <p>Mathora isn’t just about learning — it’s about <strong>transforming how you see the world</strong>.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <h1>What <span style="color: #E1CF36;">people</span> Are Saying</h1>
+        <div class="testimonial">
+            <p>"Mathora made learning so much fun. It's like having a teacher who truly understands you."</p>
+            <h3>- Alex</h3>
+            <span>High School Senior</span>
+        </div>
+        <div class="testimonial">
+            <p>"I always struggled with math until Mathora came into my life. Now, I’m confident in every class!"</p>
+            <h3>- Jamie</h3>
+            <span>College Freshman</span>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter">
+        <div id="mc_embed_shell">
+            <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+       
+            <div id="mc_embed_signup" style="background-color: #E1CF36; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.605); width: 80%; margin: 0 auto; border-radius: 15px; padding: 20px;">
+                <form action="https://mathora.us19.list-manage.com/subscribe/post?u=454a216589ec9c86df4ad7947&amp;id=c0ffeffdff&amp;f_id=00b39ee3f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                    <div id="mc_embed_signup_scroll">
+                        <h1 style="margin-top: 10%;">Stay <span style="color: #7DA3EB;">Updated</span></h1>
+                
+                        <div class="indicates-required"><span class="asterisk">*</span> Indicates Mandatory Fields</div>
+                        <div class="mc-field-group">
+                            <label for="mce-EMAIL">Email<span class="asterisk">*</span></label>
+                            <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="">
+                        </div>
+                        <div class="mc-field-group">
+                            <label for="mce-FNAME">Name</label>
+                            <input type="text" name="FNAME" class="text" id="mce-FNAME" value="">
+                        </div>
+                        <div id="mce-responses" class="clear foot">
+                            <div class="response" id="mce-error-response" style="display: none;"></div>
+                            <div class="response" id="mce-success-response" style="display: none;"></div>
+                        </div>
+                        <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                            <input type="text" name="b_454a216589ec9c86df4ad7947_c0ffeffdff" tabindex="-1" value="">
+                        </div>
+                        <div class="optionalParent">
+                            <div class="clear foot">
+                                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn" value="Subscribe" style="background-color: #7DA3EB; border-radius: 25px;">
+                                <p style="margin: 0px auto;">
+                                    <a href="http://eepurl.com/i-zqcQ" title="Mailchimp: marketing por correo electrónico fácil y divertido">
+                                        <span style="display: inline-block; background-color: transparent; border-radius: 4px;">
+                                            <img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;">
+                                        </span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+            <script type="text/javascript">
+                (function($) {
+                    window.fnames = new Array(); window.ftypes = new Array();
+                    fnames[0]='EMAIL'; ftypes[0]='email';
+                    fnames[1]='FNAME'; ftypes[1]='text';
+                    fnames[2]='LNAME'; ftypes[2]='text';
+                    fnames[3]='ADDRESS'; ftypes[3]='address';
+                    fnames[4]='PHONE'; ftypes[4]='phone';
+                    fnames[5]='BIRTHDAY'; ftypes[5]='birthday';
+                    fnames[6]='COMPANY'; ftypes[6]='text';
+                })(jQuery);
+                var $mcj = jQuery.noConflict(true);
+            </script>
+        </div>
+    </section>
+    
+    
+
+    <!-- Donate Section -->
+    <section id="donate">
+        <div class="content">
+            <h1>Be <span style="color: #E1CF36;">the Change</span></h1>
+            <p>Help us make quality education accessible to every corner of the world. Your contribution shapes futures.</p>
+            <button class="btn" onclick="window.location.href='https://paypal.me/mathoraApp?country.x=ES&locale.x=es_ES'">Donate Now</button>
+        </div>
+    </section>
+
 
     <footer>
-        &copy; 2025 Mathora. All rights reserved.  
-        <a href="#privacy-policy">Privacy Policy</a> | <a href="#terms-of-service">Terms of Service</a>
+        <p>&copy; <a href="https://mrzazon.itch.io" target="_blank">mrZazon & co.</a> All rights reserved</p>
     </footer>
-
-    <script>
-        // Manejo del selector de idioma
-        document.querySelector('.language-selector').addEventListener('click', function() {
-            document.querySelector('.language-menu').classList.toggle('display');
-        });
-    </script>
+    
+    <script src="script.js?v=7"></script>
 </body>
 </html>
